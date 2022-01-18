@@ -2,8 +2,8 @@ const assert = require("assert");
 
 describe("Google Search Function", () => {
     it("can find search results", async () => {
-        await browser.setupInterceptor();
         await browser.url("https://duckduckgo.com/");
+        await browser.setupInterceptor();
         const input = await $('[name="q"]');
         input.setValue("test123");
 
